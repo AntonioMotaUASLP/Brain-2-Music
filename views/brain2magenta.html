@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Brain2Music</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <!-- Bootstrap CSS v5.2.1 -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+
+        <!-- Magenta -->
+        <script src="https://cdn.jsdelivr.net/npm/@magenta/music@^1.0.0"></script>
+        <!-- Sweet Alert -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <!-- Logic -->
+        <script src="/logic/mainScript.js"></script>
+        <!-- Styles -->
+        <link rel="stylesheet" href="/css/styles.css" />
+    </head>
+
+    <body>
+        <header>
+            <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark nv">
+                <a class="navbar-brand" href="#">
+                    Brain2Music
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Características</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Prueba el Generador</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav> -->
+        </header>
+        <main>
+            <!-- <div class='content' id='wait'>Put on headphones. We'll wait.</div> -->
+
+            <!-- Navbar -->
+            <div class="nav-bar">
+                <div class="nav-bar-logo">
+                    <img src="/img/logo.png" alt="Logo" />
+                </div>
+                <div class="nav-bar-links">
+                    <a href="#">Inicio</a>
+                    <a href="#">Características</a>
+                    <a href="#">Prueba el Generador</a>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="sidebar side-navbar">
+                <div class="sidebar-header">
+                    <h3>Inicio</h3>
+                </div>
+
+                <ul class="list-unstyled components">
+                    <p>Genera secuencias musicales increíbles con la potencia de Magenta.js.</p>
+                    <li class="active">
+                        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Inicio</a>
+                        <ul class="collapse list-unstyled" id="homeSubmenu">
+                            <li>
+                                <a href="#">Características</a>
+                            </li>
+                            <li>
+                                <a href="#">Prueba el Generador</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Acerca de</a>
+                    </li>
+                    <li>
+                        <a href="#">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+
+
+            
+
+            <!-- Contenido Principal -->
+            <div class="container mt-4">
+                <h1>Bienvenido a Tu Proyecto</h1>
+                <p>Genera secuencias musicales increíbles con la potencia de Magenta.js.</p>
+
+                <!-- Agrega más contenido principal aquí -->
+
+                <!-- Llamadas a la acción -->
+                <div class="mt-4">
+                    <div class='content' id='start' onclick="start()">CLICK TO TRIO ENDLESSLY.</div>
+                </div>
+            </div>
+            
+            <div class="mt-4">
+                <div class='content' id='start' onclick="start()">CLICK TO TRIO ENDLESSLY.</div>
+            </div>
+            <div class='content' id='playing'>
+            <marquee scrollamount=15>ENDLESS TRIOS</marquee>
+            <marquee scrollamount=15 direction=right >ENDLESS TRIOS</marquee>
+            <div class='button' id='next' onclick="sampleAndPlayForever()">Next Trios</div> 
+            <marquee behavior=alternate id='count' direction=right>0 TRIOS</marquee>
+            <div class='button' onclick="stop()">END TRIOS</div>
+            <marquee scrollamount=15>ENDLESS TRIOS</marquee>
+            <marquee scrollamount=15 direction=right>ENDLESS TRIOS</marquee>
+            <div class='button' onclick="changeTempo(1)">Faster Trios</div>
+            <marquee behavior=alternate id='tempo'>bpm</marquee>
+            <div class='button' onclick="changeTempo(-1)">Slower Trios</div>
+            <marquee scrollamount=15>ENDLESS TRIOS</marquee>
+            <marquee scrollamount=15 direction=right>ENDLESS TRIOS</marquee>
+            </div>
+        </main>
+        <footer>
+            
+        </footer>
+        <!-- Bootstrap JavaScript Libraries -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"
+        ></script>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>
