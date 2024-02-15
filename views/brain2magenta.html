@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <title>Brain2Music</title>
+        <title>Title</title>
         <!-- Required meta tags -->
         <meta charset="utf-8" />
         <meta
@@ -17,119 +17,71 @@
             crossorigin="anonymous"
         />
 
-        <!-- Magenta -->
-        <script src="https://cdn.jsdelivr.net/npm/@magenta/music@^1.0.0"></script>
-        <!-- Sweet Alert -->
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        <!-- Logic -->
-        <script src="/logic/mainScript.js"></script>
-        <!-- Styles -->
-        <link rel="stylesheet" href="/css/styles.css" />
+        <script src="https://cdn.jsdelivr.net/npm/@magenta/music@1.0.0"> </script>
+        <link href='https://fonts.googleapis.com/css?family=Codystar' rel='stylesheet'>
+
+        <script src="/logic/mainScript.js" ></script>
+        <link rel="stylesheet" href="/css/styles.css">
     </head>
 
     <body>
         <header>
-            <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark nv">
-                <a class="navbar-brand" href="#">
-                    Brain2Music
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Características</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Prueba el Generador</a>
-                        </li>
-                    </ul>
+            <nav class="site-header sticky-top py-1 bg-dark" style="border-radius: 20px;">
+                <div class="container d-flex flex-column flex-md-row justify-content-between ">
+                  <a class="py-2 d-none d-md-inline-block" href="/views/Layout.html"><img src="/img/brain.png" alt="" style="height: 28px;"></a>
+                  <a class="py-2 d-none d-md-inline-block" href="/views/brain2magenta.html">MidiMelodies</a>
+                  <a class="py-2 d-none d-md-inline-block" href="/PianoMagic/index.html">MagicTiles</a>
+                  <a class="py-2 d-none d-md-inline-block" href="https://github.com/AntonioMotaUASLP/Brain-2-Music">Código</a>
                 </div>
-            </nav> -->
+            </nav>
+            
+    
+            <div class="titulo text-center" style="font-size: larger; padding: 10px 80px;">
+                <h1>Brain 2 Music</h1>
+                <p>Escucha y crea melodias con la ayuda de los algoritmos entrenados de Magenta. Puedes escuchar trios generados con I.A. o jugar a ser un virtuoso del piano con MagicTiles</p>
+            </div>
+            
         </header>
         <main>
-            <!-- <div class='content' id='wait'>Put on headphones. We'll wait.</div> -->
-
-            <!-- Navbar -->
-            <div class="nav-bar">
-                <div class="nav-bar-logo">
-                    <img src="/img/logo.png" alt="Logo" />
-                </div>
-                <div class="nav-bar-links">
-                    <a href="#">Inicio</a>
-                    <a href="#">Características</a>
-                    <a href="#">Prueba el Generador</a>
-                </div>
-            </div>
-
-            <!-- Sidebar -->
-            <div class="sidebar side-navbar">
-                <div class="sidebar-header">
-                    <h3>Inicio</h3>
-                </div>
-
-                <ul class="list-unstyled components">
-                    <p>Genera secuencias musicales increíbles con la potencia de Magenta.js.</p>
-                    <li class="active">
-                        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Inicio</a>
-                        <ul class="collapse list-unstyled" id="homeSubmenu">
-                            <li>
-                                <a href="#">Características</a>
-                            </li>
-                            <li>
-                                <a href="#">Prueba el Generador</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#">Acerca de</a>
-                    </li>
-                    <li>
-                        <a href="#">Contacto</a>
-                    </li>
-                </ul>
-            </div>
-
-
-            
-
-            <!-- Contenido Principal -->
-            <div class="container mt-4">
-                <h1>Bienvenido a Tu Proyecto</h1>
-                <p>Genera secuencias musicales increíbles con la potencia de Magenta.js.</p>
-
-                <!-- Agrega más contenido principal aquí -->
-
-                <!-- Llamadas a la acción -->
-                <div class="mt-4">
-                    <div class='content' id='start' onclick="start()">CLICK TO TRIO ENDLESSLY.</div>
-                </div>
-            </div>
-            
-            <div class="mt-4">
-                <div class='content' id='start' onclick="start()">CLICK TO TRIO ENDLESSLY.</div>
-            </div>
+            <div class='content' id='wait'>Put on headphones. We'll wait.</div>
+            <div class='content text-center' id='start' onclick="start()">CLICK PARA COMENZAR LAS MELODIAS.</div>
             <div class='content' id='playing'>
-            <marquee scrollamount=15>ENDLESS TRIOS</marquee>
-            <marquee scrollamount=15 direction=right >ENDLESS TRIOS</marquee>
-            <div class='button' id='next' onclick="sampleAndPlayForever()">Next Trios</div> 
-            <marquee behavior=alternate id='count' direction=right>0 TRIOS</marquee>
-            <div class='button' onclick="stop()">END TRIOS</div>
-            <marquee scrollamount=15>ENDLESS TRIOS</marquee>
-            <marquee scrollamount=15 direction=right>ENDLESS TRIOS</marquee>
-            <div class='button' onclick="changeTempo(1)">Faster Trios</div>
-            <marquee behavior=alternate id='tempo'>bpm</marquee>
-            <div class='button' onclick="changeTempo(-1)">Slower Trios</div>
-            <marquee scrollamount=15>ENDLESS TRIOS</marquee>
-            <marquee scrollamount=15 direction=right>ENDLESS TRIOS</marquee>
+              <marquee scrollamount=15>MIDI MELODIES</marquee>
+              <marquee scrollamount=15 direction=right >Melodias sin fin</marquee>
+              <div class='button' id='next' onclick="sampleAndPlayForever()">Siguiente Melodia</div> 
+              <marquee behavior=alternate id='count' direction=right>Melodia 0</marquee>
+              <div class='button' onclick="stop()">Terminar</div>
+            <br>
+
+              <div class='button' onclick="changeTempo(1)">Subir Tempo</div>
+              <marquee behavior=alternate id='tempo'>bpm</marquee>
+              <div class='button' onclick="changeTempo(-1)">Bajar Tempo</div>
+
             </div>
+        
+
         </main>
         <footer>
-            
+            <div class="container justify-content-between">
+                <div class="row">
+                  <div class="col-md-6">
+                    <h5>Contacto</h5>
+                    <p>Jorge Antonio Mota Villa </p>
+                    <p>Universidad Autónoma de San Luis Potosí</p>
+                    <p>Correo electrónico: a295153@alumnos.uaslp.mx</p>
+                  </div>
+                  <div class="col-md-6">
+                    <h5>Enlaces</h5>
+                    <ul class="list-unstyled">
+                      <li><a href="#">Inicio</a></li>
+                      <li><a href="#">Acerca de</a></li>
+                      <li><a href="#">Servicios</a></li>
+                      <li><a href="#">Contacto</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
         </footer>
         <!-- Bootstrap JavaScript Libraries -->
         <script
