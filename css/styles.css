@@ -50,6 +50,18 @@ body {
     font-size: 15px;
     height: 25px;
   }
+
+  #banner-principal {
+    background-image: url('https://images.unsplash.com/photo-1600148272607-7bbf03a40d3b?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+  }
+
+  .banner-text {
+    color: white;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.486);
+  }
   
   #start, marquee.button, div.button {
     cursor: pointer;

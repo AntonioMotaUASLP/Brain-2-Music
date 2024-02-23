@@ -1,7 +1,5 @@
-/*************************
- * Consts for everyone!
- ************************/
-// button mappings.
+
+// Mapeo de botones.
 const MAPPING_8 = {0:0, 1:1, 2:2, 3:3, 4:4, 5:5, 6:6, 7:7};
 const MAPPING_4 = {0:0, 1:2, 2:5, 3:7};
 const BUTTONS_DEVICE = ['a','s','d','f','j','k','l',';'];
@@ -17,12 +15,11 @@ let TEMPERATURE = getTemperature();
 
 const heldButtonToVisualData = new Map();
 
-// Which notes the pedal is sustaining.
+// Controla el sustain en los botones
 let sustaining = false
 let sustainingNotes = [];
 
-// Mousedown/up events are weird because you can mouse down in one element and mouse up
-// in another, so you're going to lose that original element and never mouse it up.
+// esta linea es para que el boton de play no se active hasta que el modelo este listo
 let mouseDownButton = null;
 
 const player = new Player();
@@ -33,7 +30,7 @@ let isUsingMakey = false;
 initEverything();
 
 /*************************
- * Basic UI bits
+ * Logica para el inicio de la app
  ************************/
 function initEverything() {
   genie.initialize().then(() => {
@@ -43,7 +40,7 @@ function initEverything() {
     playBtn.classList.remove('loading');
   });
 
-  // Start the drawing loop.
+  // Comenzar a dibujar el piano.
   onWindowResize();
   updateButtonText();
   window.requestAnimationFrame(() => painter.drawLoop());
@@ -62,7 +59,7 @@ function updateNumButtons(num) {
   const buttons = document.querySelectorAll('.controls > button.color');
   BUTTON_MAPPING = (num === 4) ? MAPPING_4 : MAPPING_8;
   
-  // Hide the extra buttons.
+  // Ocultar botones que no se usan.
   for (let i = 0; i < buttons.length; i++) {
     buttons[i].hidden = i >= num;
   }
@@ -118,7 +115,7 @@ function showMainScreen() {
     updateButtonText();
   });
   
-  // Figure out if WebMidi works.
+  // MIDI.
   if (navigator.requestMIDIAccess) {
     midiNotSupported.hidden = true;
     radioMidiInYes.parentElement.removeAttribute('disabled');
@@ -135,12 +132,12 @@ function showMainScreen() {
 
   document.addEventListener('keyup', onKeyUp);
 
-  // Slow to start up, so do a fake prediction to warm up the model.
+  // boton de play
   const note = genie.nextFromKeyWhitelist(0, keyWhitelist, TEMPERATURE);
   genie.resetState();
 }
 
-// Here touch means either touch or mouse.
+// Eventos de los botones
 function doTouchStart(event) {
   event.preventDefault();
   mouseDownButton = event.target; 
@@ -155,7 +152,7 @@ function doTouchEnd(event) {
   buttonUp(event.target.dataset.id);
 }
 function doTouchMove(event, down) {
-   // If we're already holding a button down, start holding this one too.
+  // si el mouse no esta presionado, no hacer nada
   if (!mouseDownButton)
     return;
   
@@ -166,10 +163,10 @@ function doTouchMove(event, down) {
 }
 
 /*************************
- * Button actions
+ * ACCIONES DE LOS BOTONES
  ************************/
 function buttonDown(button, fromKeyDown) {
-  // If we're already holding this button down, nothing new to do.
+
   if (heldButtonToVisualData.has(button)) {
     return;
   }
@@ -222,10 +219,10 @@ function buttonUp(button) {
 }
 
 /*************************
- * Events
+ * EVENTOS
  ************************/
 function onKeyDown(event) {
-  // Keydown fires continuously and we don't want that.
+  // los botones de play y reset no deben ser activados por el teclado
   if (event.repeat) {
     return;
   }
@@ -246,7 +243,7 @@ function onKeyUp(event) {
   if (event.key === ' ') {  // sustain pedal
     sustaining = false;
     
-    // Release everything.
+    // parar todas las notas que estan siendo sostenidas
     sustainingNotes.forEach((note) => player.playNoteUp(note, -1));
     sustainingNotes = [];
   } else {
@@ -259,12 +256,12 @@ function onKeyUp(event) {
 
 function onWindowResize() {
   OCTAVES = window.innerWidth > 700 ? 7 : 3;
-  const bonusNotes = OCTAVES > 6 ? 4 : 0;  // starts on an A, ends on a C.
+  const bonusNotes = OCTAVES > 6 ? 4 : 0;  // Comienza en La y termina en Do
   const totalNotes = CONSTANTS.NOTES_PER_OCTAVE * OCTAVES + bonusNotes; 
   const totalWhiteNotes = CONSTANTS.WHITE_NOTES_PER_OCTAVE * OCTAVES + (bonusNotes - 1); 
-  keyWhitelist = Array(totalNotes).fill().map((x,i) => {
+  keyWhitelist = Array(totalNotes).fill().map((x,i) => {  
     if (OCTAVES > 6) return i;
-    // Starting 3 semitones up on small screens (on a C), and a whole octave up.
+    // comienza 3 semitonos arriba en pantallas pequeñas
     return i + 3 + CONSTANTS.NOTES_PER_OCTAVE;
   });
   
@@ -274,7 +271,7 @@ function onWindowResize() {
 }
 
 /*************************
- * Utils and helpers
+ * UTILIDADES Y CONFIGURACION
  ************************/
 function getButtonFromKeyCode(key) {
   // 1 - 8
