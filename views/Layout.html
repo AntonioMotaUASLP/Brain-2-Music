@@ -32,9 +32,9 @@
 
     <body>
 
-        <nav class="site-header sticky-top py-1">
+        <nav class="site-header sticky-top py-1 bg-dark" style="border-radius: 20px">
           <div class="container d-flex flex-column flex-md-row justify-content-between ">
-            <a class="py-2 d-none d-md-inline-block" href="/views/Layout.html"><img src="/img/brain.png" alt="" style="height: 28px;"></a>
+            <a class="py-2 d-none d-md-inline-block" href="/views/Layout.html"><img src="/img/brain.png" alt="" style="height: 28px;"> Inicio</a>
             <a class="py-2 d-none d-md-inline-block" href="#">MidiMelodies</a>
             <a class="py-2 d-none d-md-inline-block" href="/PianoMagic/index.html">MagicTiles</a>
             <a class="py-2 d-none d-md-inline-block" href="#Contacto">Contacto</a>
@@ -58,18 +58,11 @@
               <h2 class="display-5">MidiMelodies</h2>
               <p class="lead">Escucha como se forman melodias creadas directamente en el navegador con algoritmos entrenados con Magenta</p>
             </div>
-            <div class="bg-light box-shadow mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
-              <center>
-                <a
-                    name=""
-                    id=""
-                    class="btn btn-primary"
-                    href="/views/brain2magenta.html"
-                    role="button"
-                    >Button</a
-                >
-              </center>
-                
+            <div class="bg-light box-shadow mx-auto" style="width: 100%; height: 300px; border-radius: 21px 21px 0 0;">
+              <!-- Imagen que lleva a la vista '/views/brain2magenta.html' -->
+              <a href="/views/brain2magenta.html">
+                <img src="/img/MidiMelodies.webp" alt="Go to MidiMelodies" style="width: 100%; height: 100%; border-radius: 21px 21px 0 0;">
+              </a>
             </div>
           </div>
           <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
@@ -77,73 +70,44 @@
               <h2 class="display-5 text-black">MagicTiles</h2>
               <p class="lead text-black">Con solo 8 teclas puedes tocar buenas melodias, con la armonia y ejecución de un virtuoso  </p>
             </div>
-            <div class="bg-dark box-shadow mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
+            <div class="bg-dark box-shadow mx-auto" style="width: 100%; height: 300px; border-radius: 21px 21px 0 0;">
+              <!-- Imagen que lleva a la vista '/views/brain2magenta.html' -->
+              <a href="/PianoMagic/index.html">
+                <img src="/img/PianoMagic.jpeg" alt="Go to PianoMagic" style="width: 100%; height: 100%; border-radius: 21px 21px 0 0;">
+              </a>
+            </div>
           </div>
         </div>
     
-        <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
-          <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-            <div class="my-3 p-3">
-              <h2 class="display-5">Another headline</h2>
-              <p class="lead">And an even wittier subheading.</p>
-            </div>
-            <div class="bg-dark box-shadow mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
-          </div>
-          <div class="bg-primary mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
-            <div class="my-3 py-3">
-              <h2 class="display-5">Another headline</h2>
-              <p class="lead">And an even wittier subheading.</p>
-            </div>
-            <div class="bg-light box-shadow mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
-          </div>
-        </div>
 
-        <footer class="container py-5">
-          <div class="row">
-            <div class="col-12 col-md">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="d-block mb-2"><circle cx="12" cy="12" r="10"></circle><line x1="14.31" y1="8" x2="20.05" y2="17.94"></line><line x1="9.69" y1="8" x2="21.17" y2="8"></line><line x1="7.38" y1="12" x2="13.12" y2="2.06"></line><line x1="9.69" y1="16" x2="3.95" y2="6.06"></line><line x1="14.31" y1="16" x2="2.83" y2="16"></line><line x1="16.62" y1="12" x2="10.88" y2="21.94"></line></svg>
-              <small class="d-block mb-3 text-muted">© 2017-2018</small>
+        <footer>
+          <div class="px-3 py-3" >
+              <div class="row px-3 py-3 bg-dark" style="border-radius: 20px;">
+                <div class="col-md-5" id="Contacto">
+                  <h5>Contacto</h5>
+                  <p>Jorge Antonio Mota Villa </p>
+                  <p>Universidad Autónoma de San Luis Potosí</p>
+                  <p>Correo electrónico: a295153@alumnos.uaslp.mx</p>
+                </div>
+                <div class="col-md-5" id="Contacto">
+                  <h5>Contacto</h5>
+                  <p>Jorge Antonio Mota Villa </p>
+                  <p>Universidad Autónoma de San Luis Potosí</p>
+                  <p>Correo electrónico: a295153@alumnos.uaslp.mx</p>
+                </div>
+                <div class="col-md-2">
+                  <h5>Enlaces</h5>
+                  <ul class="list-unstyled">
+                    <li><a href="/views/Layout.html">Inicio</a></li>
+                    <li><a href="/views/brain2magenta.html">MidiMelodies</a></li>
+                    <li><a href="/PianoMagic/index.html">MagicTiles</a></li>
+                    <li><a href="https://github.com/AntonioMotaUASLP/Brain-2-Music">Código</a></li>
+                  </ul>
+                </div>
+              </div>
             </div>
-            <div class="col-6 col-md">
-              <h5>Features</h5>
-              <ul class="list-unstyled text-small">
-                <li><a class="text-muted" href="#">Cool stuff</a></li>
-                <li><a class="text-muted" href="#">Random feature</a></li>
-                <li><a class="text-muted" href="#">Team feature</a></li>
-                <li><a class="text-muted" href="#">Stuff for developers</a></li>
-                <li><a class="text-muted" href="#">Another one</a></li>
-                <li><a class="text-muted" href="#">Last time</a></li>
-              </ul>
-            </div>
-            <div class="col-6 col-md">
-              <h5>Resources</h5>
-              <ul class="list-unstyled text-small">
-                <li><a class="text-muted" href="#">Resource</a></li>
-                <li><a class="text-muted" href="#">Resource name</a></li>
-                <li><a class="text-muted" href="#">Another resource</a></li>
-                <li><a class="text-muted" href="#">Final resource</a></li>
-              </ul>
-            </div>
-            <div class="col-6 col-md">
-              <h5>Resources</h5>
-              <ul class="list-unstyled text-small">
-                <li><a class="text-muted" href="#">Business</a></li>
-                <li><a class="text-muted" href="#">Education</a></li>
-                <li><a class="text-muted" href="#">Government</a></li>
-                <li><a class="text-muted" href="#">Gaming</a></li>
-              </ul>
-            </div>
-            <div class="col-6 col-md">
-              <h5>About</h5>
-              <ul class="list-unstyled text-small">
-                <li><a class="text-muted" href="#">Team</a></li>
-                <li><a class="text-muted" href="#">Locations</a></li>
-                <li><a class="text-muted" href="#">Privacy</a></li>
-                <li><a class="text-muted" href="#">Terms</a></li>
-              </ul>
-            </div>
-          </div>
-        </footer>
+
+      </footer>
     
     
         <!-- Bootstrap core JavaScript

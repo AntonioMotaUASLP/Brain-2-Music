@@ -69,10 +69,10 @@ body {
   }
   
   .splash a:link, a:visited {
-    color: #CDF352;
+    color: #52a5f3;
   }
   .splash-main b {
-    background: #CDF352;
+    background: #52a5f3;
     color: black;
     padding: 0 4px;
   }
@@ -120,7 +120,7 @@ body {
   }
   
   .controls button.settings:hover {
-    fill: #CDF352;
+    fill: #52a5f3;
   }
   
   .controls button span {
@@ -237,7 +237,7 @@ body {
     border-bottom: 2px solid #CDF352;
     background: transparent;
     box-shadow: none;
-    xmargin-bottom: 6px;
+    margin-bottom: 6px;
     width: 200px;
     height: 25px;
   }
