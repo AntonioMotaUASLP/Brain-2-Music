@@ -32,85 +32,102 @@
 
     <body>
 
-        <nav class="site-header sticky-top py-1 bg-dark" style="border-radius: 20px">
-          <div class="container d-flex flex-column flex-md-row justify-content-between ">
-            <a class="py-2 d-none d-md-inline-block" href="/views/Layout.html"><img src="/img/brain.png" alt="" style="height: 28px;"> Inicio</a>
-            <a class="py-2 d-none d-md-inline-block" href="/views/brain2magenta.html">MidiMelodies</a>
-            <a class="py-2 d-none d-md-inline-block" href="/PianoMagic/index.html">MagicTiles</a>
-            <a class="py-2 d-none d-md-inline-block" href="#Contacto">Contacto</a>
-            <a class="py-2 d-none d-md-inline-block" href="https://github.com/AntonioMotaUASLP/Brain-2-Music">Código</a>
+        <!-- NAVBAR -->
+        <div
+          class="row justify-content-between align-items-center g-2 p-3"
+        >
+          <div class="col">
+            <a class="py-2 d-none d-md-inline-block" href="/views/Layout.html"><img src="/img/brain.png" alt="" style="height: 28px;"> Brain2Music</a>
           </div>
-        </nav>
-    
-        <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-dark" id="banner-principal">
-          <div class="col-md-5 p-lg-12 mx-auto my-5">
-            <h1 class="display-4 font-weight-normal" style="background-color: rgba(0, 0, 0, 0.572); padding: 10px 10px; border-radius: 10px;">Brain 2 Music</h1>
-            <p class="lead font-weight-normal" style="background-color: rgba(0, 0, 0, 0.572); padding: 10px 10px; border-radius: 10px;">Escucha y crea melodias con la ayuda de los algoritmos entrenados de Magenta. Puedes escuchar trios generados con I.A. o jugar a ser un virtuoso del piano con MagicTiles</p>
-            <a class="btn btn-secondary" href="#Botones">Conocer Más</a>
-          </div>
-          <div class="product-device box-shadow d-none d-md-block"></div>
-          <div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
-        </div>
-    
-        <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3" id="Botones">
-          <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
-            <div class="my-3 py-3">
-              <h2 class="display-5">MidiMelodies</h2>
-              <p class="lead">Escucha como se forman melodias creadas directamente en el navegador con algoritmos entrenados con Magenta</p>
-            </div>
-            <div class="bg-light box-shadow mx-auto" style="width: 100%; height: 300px; border-radius: 21px 21px 0 0;">
-              <!-- Imagen que lleva a la vista '/views/brain2magenta.html' -->
-              <a href="/views/brain2magenta.html">
-                <img src="/img/MidiMelodies.webp" alt="Go to MidiMelodies" style="width: 100%; height: 100%; border-radius: 21px 21px 0 0;">
-              </a>
+          
+          <div class="col links-navegacion">
+            <div
+              class="row justify-content-between align-items-center g-2 px-3"
+            >
+              <div class="col"><a class="py-2 d-none d-md-inline-block link-navegacion-seleccionado" href="/views/Layout.html">Inicio</a></div>
+              <div class="col"><a class="py-2 d-none d-md-inline-block mx-3" href="/views/brain2magenta.html">MidiMelodies</a></div>
+              <div class="col"><a class="py-2 d-none d-md-inline-block " href="/PianoMagic/index.html">MagicTiles</a></div>
             </div>
           </div>
-          <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-            <div class="my-3 p-3">
-              <h2 class="display-5 text-black">MagicTiles</h2>
-              <p class="lead text-black">Con solo 8 teclas puedes tocar buenas melodias, con la armonia y ejecución de un virtuoso  </p>
-            </div>
-            <div class="bg-dark box-shadow mx-auto" style="width: 100%; height: 300px; border-radius: 21px 21px 0 0;">
-              <!-- Imagen que lleva a la vista '/views/brain2magenta.html' -->
-              <a href="/PianoMagic/index.html">
-                <img src="/img/PianoMagic.jpeg" alt="Go to PianoMagic" style="width: 100%; height: 100%; border-radius: 21px 21px 0 0;">
-              </a>
-            </div>
-          </div>
-        </div>
-    
+          <div class="col">
 
-        <!--          Footer          -->
-        <footer>
-          <div class="px-3 py-3 bg-dark ">
-              <div class="row px-3 py-3">
-                <div class="col-md-5" id="Contacto">
-                  <h5>Contacto</h5>
-                  <p>Jorge Antonio Mota Villa </p>
-                  <p>Universidad Autónoma de San Luis Potosí</p>
-                  <p>Correo electrónico: a295153@alumnos.uaslp.mx</p>
-                </div>
-                <div class="col-md-5" id="Contacto">
-                  <h5>Servicio Social</h5>
-                  <p>Trabajo para presentar como servicio social utilizando 
-                    la librería de Magenta.js para la creación de melodias y 
-                    la interacción con el usuario. además de la creación de
-                    un juego de piano con la ayuda de la misma librería
-                  </p>
-                </div>
-                <div class="col-md-2">
-                  <h5>Enlaces</h5>
-                  <ul class="list-unstyled">
-                    <li><a href="/views/Layout.html">Inicio</a></li>
-                    <li><a href="/views/brain2magenta.html">MidiMelodies</a></li>
-                    <li><a href="/PianoMagic/index.html">MagicTiles</a></li>
-                    <li><a href="https://github.com/AntonioMotaUASLP/Brain-2-Music">Código</a></li>
-                  </ul>
+              <div
+                class="row justify-content-end align-items-center g-2 px-md-5"
+              >
+                <div class="col"><a class="py-2 d-none d-md-inline-block" href="#Contacto">Contacto</a></div>
+                <div class="col"><a class="py-2 d-none d-md-inline-block" href="https://github.com/AntonioMotaUASLP/Brain-2-Music">Github</a></div>
+              </div>
+
+          </div>
+        </div>
+        
+    
+        <!--          Banner Principal          -->
+        <div
+          class="row justify-content-center align-items-center g-2"
+        >
+          <div class="col intro-text text-center">
+            Juega con música, juega con Magenta.js 
+            <center>
+              <p>Escucha y crea melodias con la ayuda de los algoritmos entrenados de Magenta. Puedes escuchar trios generados con I.A. o jugar a ser un virtuoso del piano con MagicTiles</p>
+            </center>
+          </div>
+        </div>
+        
+        <!--    CARDS   -->
+        <div
+          class="row justify-content-center align-items-start g-2 cards-principales"
+        >
+          <div class="col">
+            <a href="/views/brain2magenta.html">
+              <div class="card-midimelodies p-3">
+                <div class="my-3 py-3 px-3">
+                  <h2 class="display-5">MidiMelodies</h2>
+                  <p class="lead">Escucha como se forman melodias creadas directamente en el navegador con algoritmos entrenados con Magenta</p>
                 </div>
               </div>
-            </div>
+            </a>
+          </div>
+          <div class="col">
+            <a href="/PianoMagic/index.html">
+              <div class="card-magicTiles p-3">
+                <div class="my-3 py-3 px-3">
+                  <h2 class="display-5">MagicTiles</h2>
+                  <p class="lead">Con solo 8 teclas puedes tocar buenas melodias, con la armonia y ejecución de un virtuoso</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+    
 
-      </footer>
+      <div
+        class="row justify-content-center align-items-start g-2 cards-principales"
+      >
+        <div class="col">
+          <a href="/views/brain2magenta.html">
+            <div class="card-contacto p-3">
+              <div class="my-3 py-3 px-3">
+                  <p>Jorge Antonio Mota Villa </p>
+                  <p>Universidad Autónoma de San Luis Potosí</p>
+                  <p>a295153@alumnos.uaslp.mx</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col">
+          <a href="/PianoMagic/index.html">
+            <div class="card-servicio p-3">
+              <div class="my-3 py-3 px-3">
+                <p class="lead">Trabajo para presentar como servicio social utilizando 
+                  la librería de Magenta.js para la creación de melodias y 
+                  la interacción con el usuario. además de la creación de
+                  un juego de piano con la ayuda de la misma librería</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
     
     
         <!-- Bootstrap core JavaScript

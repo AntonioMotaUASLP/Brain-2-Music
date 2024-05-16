@@ -26,19 +26,45 @@
 
     <body>
         <header>
-            <nav class="site-header sticky-top py-1 bg-dark" style="border-radius: 20px;">
-                <div class="container d-flex flex-column flex-md-row justify-content-between ">
-                  <a class="py-2 d-none d-md-inline-block" href="/views/Layout.html"><img src="/img/brain.png" alt="" style="height: 28px;"></a>
-                  <a class="py-2 d-none d-md-inline-block" href="/views/brain2magenta.html">MidiMelodies</a>
-                  <a class="py-2 d-none d-md-inline-block" href="/PianoMagic/index.html">MagicTiles</a>
-                  <a class="py-2 d-none d-md-inline-block" href="https://github.com/AntonioMotaUASLP/Brain-2-Music">Código</a>
+            <!-- NAVBAR -->
+            <div
+              class="row justify-content-between align-items-center g-2 p-3"
+            >
+              <div class="col">
+                <a class="py-2 d-none d-md-inline-block" href="/views/Layout.html"><img src="/img/brain.png" alt="" style="height: 28px;"> Brain2Music</a>
+              </div>
+              
+              <div class="col links-navegacion">
+                <div
+                  class="row justify-content-between align-items-center g-2 px-3"
+                >
+                  <div class="col"><a class="py-2 d-none d-md-inline-block " href="/views/Layout.html">Inicio</a></div>
+                  <div class="col"><a class="py-2 d-none d-md-inline-block link-navegacion-seleccionado" href="/views/brain2magenta.html">MidiMelodies</a></div>
+                  <div class="col"><a class="py-2 d-none d-md-inline-block " href="/PianoMagic/index.html">MagicTiles</a></div>
                 </div>
-            </nav>
-            
+              </div>
+              <div class="col">
+
+                  <div
+                    class="row justify-content-end align-items-center g-2 px-md-5"
+                  >
+                    <div class="col"><a class="py-2 d-none d-md-inline-block" href="#Contacto">Contacto</a></div>
+                    <div class="col"><a class="py-2 d-none d-md-inline-block" href="https://github.com/AntonioMotaUASLP/Brain-2-Music">Github</a></div>
+                  </div>
+
+              </div>
+            </div>
     
-            <div class="titulo text-center" style="font-size: larger; padding: 10px 80px;">
-                <h1>Brain 2 Music</h1>
-                <p>Escucha y crea melodias con la ayuda de los algoritmos entrenados de Magenta. Puedes escuchar trios generados con I.A. o jugar a ser un virtuoso del piano con MagicTiles</p>
+            <!--          Banner Principal          -->
+            <div
+              class="row justify-content-center align-items-center g-2"
+            >
+              <div class="col intro-text text-center">
+                MidiMelodies 
+                <center>
+                  <p>Escucha y crea melodias con la ayuda de los algoritmos entrenados de Magenta. Puedes escuchar trios generados con I.A. o jugar a ser un virtuoso del piano con MagicTiles</p>
+                </center>
+              </div>
             </div>
             
         </header>
@@ -61,28 +87,37 @@
         
 
         </main>
-        <footer>
-            <div class="container justify-content-between">
-                <div class="row">
-                  <div class="col-md-6">
-                    <h5>Contacto</h5>
-                    <p>Jorge Antonio Mota Villa </p>
-                    <p>Universidad Autónoma de San Luis Potosí</p>
-                    <p>Correo electrónico: a295153@alumnos.uaslp.mx</p>
+
+            <div
+              class="row justify-content-center align-items-start g-2 cards-principales"
+            >
+              <div class="col">
+                <a href="/views/brain2magenta.html">
+                  <div class="card-contacto p-3">
+                    <div class="my-3 py-3 px-3">
+                        <p>Jorge Antonio Mota Villa </p>
+                        <p>Universidad Autónoma de San Luis Potosí</p>
+                        <p>a295153@alumnos.uaslp.mx</p>
+                    </div>
                   </div>
-                  <div class="col-md-6">
-                    <h5>Enlaces</h5>
+                </a>
+              </div>
+              <div class="col">
+                <a href="/PianoMagic/index.html">
+                  <div class="card-servicio p-3">
+                    <div class="my-3 py-3 px-3">
+                      <h5>Enlaces</h5>
                     <ul class="list-unstyled">
                       <li><a href="#">Inicio</a></li>
                       <li><a href="#">Acerca de</a></li>
                       <li><a href="#">Servicios</a></li>
                       <li><a href="#">Contacto</a></li>
                     </ul>
+                    </div>
                   </div>
-                </div>
+                </a>
               </div>
-
-        </footer>
+            </div>
         <!-- Bootstrap JavaScript Libraries -->
         <script
             src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"

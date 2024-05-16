@@ -229,7 +229,7 @@ function onKeyDown(event) {
   if (event.key === ' ') {  // sustain pedal
     sustaining = true;
   } else if (event.key === '0' || event.key === 'r') {
-    console.log('🧞‍♀️ resetting!');
+    console.log('🧞‍♀️ resetting!'); // xd se ve bien cura el genio chiquito ahí
     genie.resetState();
   } else {
     const button = getButtonFromKeyCode(event.key);

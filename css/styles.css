@@ -25,10 +25,86 @@
 }
 
 body {
-    background-color:rgb(45, 45, 45);
+    background-color:rgb(30, 30, 30);
     color:white;
     padding: 10px;  
   }
+
+  a {
+    color: rgb(150, 150, 150);
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: rgb(255, 255, 255);
+  }
+
+  .links-navegacion {
+    background-color: rgb(45, 45, 45);
+    border-radius: 30px;
+    margin-right: 20px;
+    width: min-content;
+    text-align: center;
+  }
+  .link-navegacion-seleccionado{
+    color: white; 
+    background-color: rgb(80, 80, 80);
+    border-radius: 20px;
+    margin: 5px 0px;
+    padding: 0px 10px;
+    width: 100%;
+  }
+
+  .intro-text{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 60px;
+    font-weight: lighter;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+        .intro-text p{
+          font-size: 18px;
+          font-weight: lighter;
+          text-align: center;
+          margin-bottom: 20px;
+          width: 60vw;
+        }
+
+  .cards-principales{
+    background-color: rgb(45, 45, 45);
+    border-radius: 30px;
+    margin: 20px 20px;
+    padding: 10px;
+  }
+
+      .card-midimelodies{
+        background-image: url(/img/ableton-midi.png);
+        background-size:cover;
+        border-radius: 20px;
+        opacity: 60%;
+        color: rgb(255, 255, 255);
+      }
+      .card-midimelodies:hover{
+        opacity: 100%;
+      }
+
+      .card-magicTiles{
+        background-image: url(/img/perillas.jpeg);
+        background-size: cover;
+        border-radius: 20px;
+        opacity: 60%;
+        color: rgb(255, 255, 255);
+      }
+      .card-magicTiles:hover{
+        opacity: 100%;
+      }
+
+      .card-contacto{
+        background-color: rgb(30, 30, 30);
+        border-radius: 20px;
+        color: rgb(255, 255, 255);
+        height: min-content;
+      }
 
 .header {
     font-family: 'Poppins', Arial, sans-serif;

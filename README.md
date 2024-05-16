@@ -5,7 +5,8 @@ El proyecto se centra en demostrar las capacidades innovadoras de Magenta.js, un
 
 
 ## Instalación
-Clonar el repositorio en la carpeta destino con 
+Clonar el repositorio en la carpeta destino con:
+
 `git clone https://github.com/AntonioMotaUASLP/Brain-2-Music.git`
 
 En la carpeta llamada 'Main project'. Esta carpeta incluye sub-carpetas como css, img, logic y PianoMagic. Cada una de estas sub-carpetas contiene elementos específicos del proyecto, como archivos de estilo, imágenes y la lógica del proyecto, representada por el código JavaScript. 
